@@ -6,10 +6,11 @@ Subscribe to function events
 `npm install flaxa --save`
 
 
-Use flaxa to subscribe to events on your function
+**Use flaxa to subscribe to events on your function.**
 
-input function can be a promise or async to be more powerful.
+**Input function can be a promise or async to be more powerful.**
 
+Example
 ```javascript
 const flaxa = require('flaxa')
 
@@ -18,12 +19,13 @@ const addOverTime = flaxa(
   (emit) => 
   // your function that should do stuff... 
   (a) => {
+    // emit to all subscribers
     emit('my emit value', a)
     return a
   }
 )
 
-// ypur subscriptions
+// your subscriptions
 addOverTime.on('my emit value', (value) => {
   console.log(value) // hello world
 })
@@ -48,10 +50,11 @@ const addOverTime = flaxa(
 
       if(i === 5){
         clearInterval(interval)
+        // emit to all subscribers
         // if you emit finally no other emits will work after 
         emit('finally', (a + b) + i)
       }
-
+      // emit to all subscribers
       emit('update', (a + b) + i)
 
       i++
