@@ -1,0 +1,27 @@
+{
+  "name": "flaxa",
+  "version": "1.0.0",
+  "description": "An event function thing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richie-south/flaxa.git"
+  },
+  "keywords": [
+    "events",
+    "event",
+    "emit"
+  ],
+  "author": "richard söderman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richie-south/flaxa/issues"
+  },
+  "homepage": "https://github.com/richie-south/flaxa#readme",
+  "devDependencies": {
+    "eslint": "^3.16.1"
+  }
+}
