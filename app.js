@@ -4,8 +4,8 @@ function flaxa(fn){
   
   let subscribers = []
 
-  const _flaxa = (...args) =>
-    fn(emit, onFinally)(...args)
+  const _flaxa = async (...args) =>
+    await fn(emit, onFinally)(...args)
   
   const addSubscriber = (value) => {
     subscribers = [...subscribers, value]
